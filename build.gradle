@@ -1,0 +1,30 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+group 'me.ukuz'
+version '1.0-SNAPSHOT'
+
+subprojects {
+    apply plugin: 'java'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile 'org.projectlombok:lombok:1.18.4'
+        compile 'commons-lang:commons-lang:2.6'
+
+        testCompile 'junit:junit:4.12'
+    }
+
+}
+
+
+
