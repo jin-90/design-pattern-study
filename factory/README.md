@@ -6,14 +6,14 @@
 
 #### 简单工厂模式
 
-![image-20190317005846016](/var/folders/kx/vyxcpbbd69b071hn9wglnx3w0000gn/T/abnerworks.Typora/image-20190317005846016.png)
+![image-20190317005846016](https://upload-images.jianshu.io/upload_images/5141732-b9bb5c35fbc12488.png)
 
 
 
 #### 工厂方法模式
 
-![image-20190317010626273](/var/folders/kx/vyxcpbbd69b071hn9wglnx3w0000gn/T/abnerworks.Typora/image-20190317010626273.png)
+![image-20190317010626273](https://upload-images.jianshu.io/upload_images/5141732-957cb8c815e548a8.png)
 
-#### 抽象工厂模式
+#### 抽象工厂模式s
 
-![image-20190317011257745](/var/folders/kx/vyxcpbbd69b071hn9wglnx3w0000gn/T/abnerworks.Typora/image-20190317011257745.png)
+![image-20190317011257745](https://upload-images.jianshu.io/upload_images/5141732-b97dbcb98668017a.png)
