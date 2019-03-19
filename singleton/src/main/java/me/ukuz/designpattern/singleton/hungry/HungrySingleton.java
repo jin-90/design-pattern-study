@@ -6,4 +6,14 @@ package me.ukuz.designpattern.singleton.hungry;
  * @create: 2019-03-17 02:08
  */
 public class HungrySingleton {
+
+    private HungrySingleton() {
+    }
+
+    private static final HungrySingleton instance = new HungrySingleton();
+
+    public static HungrySingleton getInstance() {
+        return instance;
+    }
+
 }
