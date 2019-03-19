@@ -1,4 +1,5 @@
 rootProject.name = 'design-pattern-study'
 include 'factory'
-include 'factory'
+include 'singleton'
+include 'observer'
 
