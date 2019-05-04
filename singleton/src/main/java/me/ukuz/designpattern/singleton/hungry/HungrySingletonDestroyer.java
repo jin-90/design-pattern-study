@@ -1,8 +1,9 @@
 package me.ukuz.designpattern.singleton.hungry;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import com.sun.xml.internal.messaging.saaj.util.ByteInputStream;
+import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream;
+
+import java.io.*;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.security.AccessController;
@@ -30,8 +31,20 @@ public class HungrySingletonDestroyer {
 
     public static HungrySingleton createBySerializable() {
 
-//        try (ObjectOutputStream oos = new ObjectOutputStream()) {
-//        }
+        try (ByteArrayOutputStream bos = new ByteArrayOutputStream(); ObjectOutputStream oos = new ObjectOutputStream(bos)) {
+            HungrySingleton hungrySingletonA = HungrySingleton.getInstance();
+            oos.writeObject(hungrySingletonA);
+
+            try (ByteArrayInputStream bis = new ByteArrayInputStream(bos.toByteArray()); ObjectInputStream ois = new ObjectInputStream(bis)) {
+                HungrySingleton hungrySingletonB = (HungrySingleton) ois.readObject();
+                System.out.println(hungrySingletonA);
+                System.out.println(hungrySingletonB);
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         return null;
 
