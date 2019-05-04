@@ -3,4 +3,4 @@
 * [观察者模式](https://github.com/jin-90/design-pattern-study/tree/master/observer)
 * [策略模式](https://github.com/jin-90/design-pattern-study/tree/master/strategy)
 * [委派模式](https://github.com/jin-90/design-pattern-study/tree/master/delegate)
-
+* [代理模式](https://github.com/jin-90/design-pattern-study/tree/master/proxy)
