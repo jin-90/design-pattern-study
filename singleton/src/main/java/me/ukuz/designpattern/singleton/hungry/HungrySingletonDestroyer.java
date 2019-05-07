@@ -1,19 +1,12 @@
 package me.ukuz.designpattern.singleton.hungry;
 
-import com.sun.xml.internal.messaging.saaj.util.ByteInputStream;
-import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream;
-
 import java.io.*;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
-import java.security.AccessController;
-import java.security.PrivilegedActionException;
-import java.security.PrivilegedExceptionAction;
 
 /**
- * @description:
- * @author: ukuz90(171282084 @ qq.com)
- * @create: 2019-03-17 02:27
+ * @author ukuz90
+ * @date 2019-03-17
  */
 public class HungrySingletonDestroyer {
 

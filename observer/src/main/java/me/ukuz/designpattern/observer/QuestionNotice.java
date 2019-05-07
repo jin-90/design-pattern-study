@@ -4,9 +4,8 @@ import com.google.common.eventbus.Subscribe;
 import lombok.Data;
 
 /**
- * @description:
- * @author: ukuz90(171282084 @ qq.com)
- * @create: 2019-03-20 01:06
+ * @author ukuz90
+ * @date 2019-03-20
  */
 @Data
 public class QuestionNotice {

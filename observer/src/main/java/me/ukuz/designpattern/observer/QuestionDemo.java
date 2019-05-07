@@ -1,9 +1,8 @@
 package me.ukuz.designpattern.observer;
 
 /**
- * @description:
- * @author: ukuz90(171282084 @ qq.com)
- * @create: 2019-03-20 00:44
+ * @author ukuz90
+ * @date 2019-03-20
  */
 public class QuestionDemo {
 

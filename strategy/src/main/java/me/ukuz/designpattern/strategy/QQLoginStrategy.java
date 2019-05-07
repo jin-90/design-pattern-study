@@ -6,9 +6,8 @@ import me.ukuz.designpattern.strategy.dto.QQLoginRequest;
 import me.ukuz.designpattern.strategy.dto.WechatLoginRequest;
 
 /**
- * @description:
- * @author: ukuz90(171282084 @ qq.com)
- * @create: 2019-03-20 01:58
+ * @author ukuz90
+ * @date 2019-03-20
  */
 public class QQLoginStrategy implements LoginStrategy<QQLoginRequest> {
 

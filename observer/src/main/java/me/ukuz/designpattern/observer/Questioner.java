@@ -4,22 +4,29 @@ import com.google.common.eventbus.AsyncEventBus;
 import com.google.common.eventbus.EventBus;
 import lombok.Data;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Stream;
 
 /**
- * @description:
- * @author: ukuz90(171282084 @ qq.com)
- * @create: 2019-03-20 00:37
+ * @author ukuz90
+ * @date 2019-03-20
  */
 @Data
 public class Questioner implements Gper {
 
-    static EventBus eventBus = new AsyncEventBus(new ThreadPoolExecutor(1, 2, 60, TimeUnit.SECONDS, new LinkedBlockingQueue<>()));
+    static EventBus eventBus;
+    static {
+        AtomicInteger threadCount = new AtomicInteger();
+        ThreadFactory threadFactory = r -> new Thread("my-event-bus" + threadCount.incrementAndGet());
+        Executor threadPool = new ThreadPoolExecutor(1, 2, 60,
+                TimeUnit.SECONDS, new LinkedBlockingQueue<>(), threadFactory);
+
+        eventBus = new AsyncEventBus(threadPool);
+    }
 
     private String name;
     private Set<Label> labels;
@@ -36,7 +43,7 @@ public class Questioner implements Gper {
 
     @Override
     public void interest(Label...label) {
-        Stream.of(label).forEach(this.labels::add);
+        labels.addAll(Arrays.asList(label));
         QuestionNotice qn = new QuestionNotice();
         qn.setOwner(this);
         eventBus.register(qn);

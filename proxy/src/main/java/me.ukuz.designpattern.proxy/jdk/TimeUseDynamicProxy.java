@@ -5,9 +5,8 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * @description:
- * @author: ukuz90
- * @create: 2019-05-04
+ * @author ukuz90
+ * @date 2019-05-04
  */
 public class TimeUseDynamicProxy implements InvocationHandler {
 
@@ -16,6 +15,7 @@ public class TimeUseDynamicProxy implements InvocationHandler {
     private TimeUseDynamicProxy(Object target) {
         this.target = target;
     }
+
 
     @SuppressWarnings("unchecked")
     public static <T> T newInstance(Class<?> clazz) throws IllegalAccessException, InstantiationException {

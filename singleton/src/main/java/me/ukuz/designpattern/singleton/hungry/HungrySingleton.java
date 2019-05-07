@@ -3,9 +3,9 @@ package me.ukuz.designpattern.singleton.hungry;
 import java.io.Serializable;
 
 /**
- * @description:
- * @author: ukuz90(171282084 @ qq.com)
- * @create: 2019-03-17 02:08
+ * 饿汉式单例
+ * @author ukuz90
+ * @date 2019-03-17
  */
 public class HungrySingleton implements Serializable {
 

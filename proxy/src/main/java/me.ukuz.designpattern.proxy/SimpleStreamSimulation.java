@@ -4,11 +4,10 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @description:
- * @author: ukuz90
- * @create: 2019-05-04
+ * @author ukuz90
+ * @date 2019-05-04
  */
-public class SimpleIOSimulation implements IOSimulation {
+public class SimpleStreamSimulation implements StreamSimulation {
     @Override
     public String read() throws InterruptedException {
         long timeUse = new Random().nextInt(2000) + 50;

@@ -3,9 +3,8 @@ package me.ukuz.designpattern.observer;
 import lombok.Data;
 
 /**
- * @description:
- * @author: ukuz90(171282084 @ qq.com)
- * @create: 2019-03-20 00:28
+ * @author ukuz90
+ * @date 2019-03-20
  */
 @Data
 public class Question {
