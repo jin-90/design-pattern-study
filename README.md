@@ -7,4 +7,5 @@
 * [单例模式](https://github.com/zhuangjinjin/design-pattern-study/tree/master/singleton)
 * [模板模式](https://github.com/zhuangjinjin/design-pattern-study/tree/master/template)
 * [适配器模式](https://github.com/zhuangjinjin/design-pattern-study/tree/master/adapter)
+* [原型模式](https://github.com/zhuangjinjin/design-pattern-study/tree/master/prototype)
 

@@ -6,4 +6,5 @@ include 'strategy'
 include 'delegate'
 include 'proxy'
 include 'template'
+include 'prototype'
 
